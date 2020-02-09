@@ -1,0 +1,27 @@
+---
+# Install ansible-buildah packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ ansible-buildah_packages_remove }}"
+    state: absent
+  become: true
+  when: ansible-buildah_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ ansible-buildah_packages_repos }}"
+    state: "{{ ansible-buildah_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ ansible-buildah_packages_prereq }}"
+    state: "{{ ansible-buildah_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ ansible-buildah_packages_install }}"
+    state: "{{ ansible-buildah_packages_state }}"
+  become: true

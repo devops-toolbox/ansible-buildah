@@ -1,0 +1,19 @@
+---
+# defaults file for ansible-buildah
+
+ansible-buildah_packages_state: present
+ansible-buildah_remove_packages: true
+ansible-buildah_enable_service: true
+ansible-buildah_enable_selinux: true
+ansible-buildah_copy_templates: true
+ansible-buildah_firewall_configure: true
+ansible-buildah_firewall_rules:
+  - service: ssh
+  - port: 3389
+ansible-buildah_users:
+  - user: devops
+    group: docker
+ansible-buildah_selinux_booleans:
+  - name: ftp_home_dir
+    state: true
+    persistent: true

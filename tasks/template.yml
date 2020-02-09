@@ -1,0 +1,10 @@
+---
+# Template configuration files for ansible-buildah
+
+- name: template is copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  become: true
+  loop: "{{ ansible-buildah_templates_copy }}"
+  when: ansible-buildah_copy_templates

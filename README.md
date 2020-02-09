@@ -8,10 +8,10 @@ ansible-buildah: Ansible-buildah
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.ansible-buildah](https://galaxy.ansible.com/devops-toolbox.ansible-buildah)
+[https://galaxy.ansible.com/devopstoolbox.ansible-buildah](https://galaxy.ansible.com/devopstoolbox.ansible-buildah)
 
 ```bash
-ansible-galaxy install devops-toolbox.ansible-buildah
+ansible-galaxy install devopstoolbox.ansible-buildah
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: ansible-buildah is configured
       import_role:
-        name: devops-toolbox.ansible-buildah
+        name: devopstoolbox.ansible-buildah
       vars:
         ansible-buildah_packages_state: present
         ansible-buildah_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
